@@ -1,0 +1,22 @@
+{
+  "onnx": "models\\tiny_cls_96.onnx",
+  "espdl": "models\\tiny_cls_96_s8_p4.espdl",
+  "target": "esp32p4",
+  "bits": 8,
+  "input_shape": [
+    1,
+    3,
+    96,
+    96
+  ],
+  "input_layout": "NCHW",
+  "normalization": "rgb_float32 = (rgb / 255.0 - 0.5) / 0.5",
+  "classes": [
+    "unknown",
+    "plastic_bottle",
+    "foam",
+    "net"
+  ],
+  "calibration_images": 384,
+  "calibration_steps": 128
+}
